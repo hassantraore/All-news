@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<section class="jumbotron text-center">
+    <div class="container w-100">
+        <h1 class="jumbotron-heading">Connectez-vous</h1>
+     </div>
+</section>
+   <div class="container">
+    <div class="row">
+        <div class="col">
+            {{ form_start(form)}}
+            {{ form_errors(form)}}
+            {{ form_row(form.username)}}
+            {{ form_row(form.passwords)}}
+            <button class="btn btn-primary mb-5" type="submit">Se Connecter </button>
+            {{ form_end(form)}}
+        </div>
+    </div>
+    </div>
+
+
+{% endblock %}

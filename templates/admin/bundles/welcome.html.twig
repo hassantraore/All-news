@@ -1,0 +1,29 @@
+{# @var ea \EasyCorp\Bundle\EasyAdminBundle\Context\AdminContext #}
+{% extends '@EasyAdmin/page/content.html.twig' %}
+
+{% block page_title 'Bienvenue sur le site d \' Information Allnew ' %}
+
+{% block page_content %}
+   <div class="container">
+       <div class="row">
+
+           <div class="col-4 alert-info">
+               <span class="display-4" > {{ cuntAllCategory["value"] }} </span> Categories
+           </div>
+
+
+           <div class="col-4 alert-info">
+               <span class="display-4" >{{ cuntAllPosts["value"]}}  </span>  Posts
+
+           </div>
+
+
+           <div class="col-4 alert-info">
+               <span class="display-4" >{{ cuntAllUser["value"]}} </span>  Connectés
+
+           </div>
+
+       </div>
+   </div>
+
+{% endblock %}

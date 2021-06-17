@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-12 mb-4">
+             {#<h2>Allnews</h2>#}
+        </div>
+
+        {%for categorie in categories %}
+            {% set img = categorie.post|last %}
+    {# <div class="col-4 mb-3">#}
+    <div class="col-6 col-md-6 col-lg-4 mb-3">
+                <div class="card">
+
+
+                    <a class="card lift lift-lg shadow-light-lg mb-7" href ="{{ path("categories",{ 'slug': categorie.slug}) }}">
+
+
+                        {# <img class="card-img-top" src="{{ img.image }}" alt="#" />  img.image#}
+
+
+
+                        <div class="card bg-dark text-white">
+                            <img class="card-img-top" src="{{ asset(img.image ) }}" />
+                            <div class="card-img-overlay">
+                                <h5 class="card-title">{{ categorie.name}}</h5>
+                            </div>
+                        </div>
+                     </a>
+
+                    {# <div class="card-body  d-flex justify-content-between">
+                        <small  class="text-muted">
+                            {{  categorie.name}}
+                        </small>
+
+                        <small  class="text-muted">
+                            {{  categorie.description}}
+                        </small>
+                    </div>#}
+
+                    {#<div class="card-footer d-flex justify-content-between">
+
+                    </div>#}
+
+
+                </div>
+            </div>
+
+        {% endfor %}
+        <div class="col-12 mb-4">
+
+            <div class="col-12 mt-4">
+                {#pagination #}
+            </div>
+        </div>
+    </div>
+    </div>
+{% endblock %}

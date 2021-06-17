@@ -1,0 +1,6 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h3>Modifier un Article</h3>
+  {% include '_form.html.twig' with {form:form,buttonName:'Modifier'}%}
+{% endblock %}
